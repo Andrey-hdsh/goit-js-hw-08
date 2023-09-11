@@ -24,7 +24,6 @@ if (localInfo) {
     const parseLocaleInfo = JSON.parse(localInfo);
     modalForm.elements.email.value = parseLocaleInfo.email || '';
     modalForm.elements.message.value = parseLocaleInfo.message || '';
-    alert('Всі поля форми повинні бути заповнені')
 } else {
     modalForm.reset();
 };
