@@ -32,12 +32,12 @@ if (localInfo) {
 function onFormSubmit(event) {
 event.preventDefault();
 // console.log(event);
-if (modalForm.elements.email.value !== '' || modalForm.elements.message.value !== '') {
+if (modalForm.elements.email.value === '' || modalForm.elements.message.value === '') {
+    alert("Будь ласка, заповніть усі обов'язкові поля");
+} else {
     console.log({ email: modalForm.elements.email.value, message: modalForm.elements.message.value });
 
     localStorage.removeItem('FORM_DATA_KEY');
     modalForm.reset();
-} else {
-    alert("Будь ласка, заповніть усі обов'язкові поля")
     }
 };
